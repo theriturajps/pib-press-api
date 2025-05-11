@@ -1,7 +1,4 @@
-const {
-	scrapeLatestPressReleases,
-	scrapePressReleasesByDate
-} = require('../services/scraperService');
+const { scrapeLatestPressReleases, scrapePressReleasesByDate } = require('../services/scraperService');
 
 const getLatestPressReleases = async (req, res) => {
 	try {
@@ -55,7 +52,4 @@ const getPressReleasesByDate = async (req, res) => {
 	}
 };
 
-module.exports = {
-	getLatestPressReleases,
-	getPressReleasesByDate
-};
+module.exports = { getLatestPressReleases, getPressReleasesByDate };

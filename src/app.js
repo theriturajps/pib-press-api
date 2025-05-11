@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use('/api/press-releases', pressReleaseRoutes);
+app.use('/api', pressReleaseRoutes);
 
 // Health check
 app.get('/', (req, res) => {

@@ -80,7 +80,4 @@ const scrapePressReleasesByDate = async (date) => {
 	}
 };
 
-module.exports = {
-	scrapeLatestPressReleases,
-	scrapePressReleasesByDate
-};
+module.exports = { scrapeLatestPressReleases, scrapePressReleasesByDate };
