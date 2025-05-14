@@ -42,42 +42,4 @@ const scrapeLatestPressReleases = async () => {
 	}
 };
 
-const scrapePressReleasesByDate = async (date) => {
-	console.log(date)
-	try {
-		const [year, month, day] = date.split('-');
-		const response = await axios.get(`${PIB_BASE_URL}/PressReleasePage.aspx`, {
-			params: {
-				PRYear: year,
-				PRMonth: month,
-				PRDay: day
-			}
-		});
-
-		const $ = cheerio.load(response.data);
-		const pressReleases = [];
-
-		$('.container .release-content').each((index, element) => {
-			const title = $(element).find('h3 a').text().trim();
-			const link = $(element).find('h3 a').attr('href');
-			const releaseDate = $(element).find('.release-date').text().trim();
-			const content = $(element).find('p').text().trim();
-
-			pressReleases.push({
-				id: index + 1,
-				title,
-				link: link.startsWith('http') ? link : `${PIB_BASE_URL}${link}`,
-				date: releaseDate,
-				content,
-				ministry: 'Not specified'
-			});
-		});
-
-		return pressReleases;
-	} catch (error) {
-		console.error('Error scraping press releases by date:', error);
-		throw error;
-	}
-};
-
-module.exports = { scrapeLatestPressReleases, scrapePressReleasesByDate };
+module.exports = { scrapeLatestPressReleases };
