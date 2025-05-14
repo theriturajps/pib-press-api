@@ -28,7 +28,8 @@ const scrapeLatestPressReleases = async () => {
 				pressReleases.push({
 					pressReleaseId,
 					title,
-					link: link.startsWith('http') ? link : `${PIB_BASE_URL}${link}`,
+					detail: link.startsWith('http') ? link : `${PIB_BASE_URL}${link}`,
+					view: `${PIB_BASE_URL}/PressReleasePage.aspx?PRID=${pressReleaseId}`,
 					date,
 					ministry: currentMinistry
 				});
