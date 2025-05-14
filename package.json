@@ -5,19 +5,15 @@
 	"main": "src/server.js",
 	"scripts": {
 		"start": "node src/server.js",
-		"dev": "nodemon src/server.js",
-		"build": "npm install",
-		"netlify:dev": "netlify dev"
+		"dev": "nodemon src/server.js"
 	},
 	"dependencies": {
 		"axios": "^1.6.2",
 		"cheerio": "^1.0.0-rc.12",
 		"cors": "^2.8.5",
-		"express": "^4.18.2",
-		"serverless-http": "^3.2.0"
+		"express": "^4.18.2"
 	},
 	"devDependencies": {
-		"netlify-cli": "^17.0.0",
 		"nodemon": "^3.0.2"
 	}
 }
