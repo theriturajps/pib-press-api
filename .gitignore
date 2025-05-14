@@ -1,1 +1,33 @@
+# Dependency directories
 node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Environment configuration
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# IDE configurations
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Build output
+/dist
+/.netlify
+/.vercel
+/build
+
+# Logs
+logs
+*.log
+npm-debug.log*
